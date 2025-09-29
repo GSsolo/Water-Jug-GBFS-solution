@@ -37,12 +37,13 @@ int main() {
         // cek goal
         if (current.x == goal.x && current.y == goal.y) {
             cout << "Solusi ditemukan:\n";
+            int langka=0;
             for (auto [a,b] : current.path) {
-                cout << "(" << a << "," << b << ")\n";
+                cout <<"Langka "<<langka<< " (" << a << "," << b << ")\n";
+                langka++;
             }
             return 0;
         }
-
         vector<State> perintah;
         int x = current.x;
         int y = current.y;
@@ -93,4 +94,5 @@ int main() {
 
     cout << "Tidak ada solusi."<<endl;
     return 0;
+
 }
